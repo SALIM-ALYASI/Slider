@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Slider" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="6" translatesAutoresizingMaskIntoConstraints="NO" id="EmQ-xw-XQm" customClass="DesignableSlider" customModule="Slider">
+                                <rect key="frame" x="37" y="572" width="340" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="eRz-k2-ZFU"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="thumbImage" value="face"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="Sliderb:" destination="BYZ-38-t0r" eventType="valueChanged" id="3C2-Tq-fpc"/>
+                                </connections>
+                            </slider>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yhu-mO-6Yo">
+                                <rect key="frame" x="87" y="237" width="240" height="292"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="292" id="1nl-pe-7fn"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Yhu-mO-6Yo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="BcZ-Ng-mDm"/>
+                            <constraint firstItem="EmQ-xw-XQm" firstAttribute="top" secondItem="Yhu-mO-6Yo" secondAttribute="bottom" constant="43" id="Hz2-j7-JjD"/>
+                            <constraint firstItem="Yhu-mO-6Yo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="193" id="NV0-dh-xep"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yhu-mO-6Yo" secondAttribute="trailing" constant="87" id="TKg-RF-4Gp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EmQ-xw-XQm" secondAttribute="bottom" constant="261" id="Uis-Ec-qjG"/>
+                            <constraint firstItem="EmQ-xw-XQm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="39" id="cWe-mW-gTD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EmQ-xw-XQm" secondAttribute="trailing" constant="39" id="wDc-ql-1dF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Slidera" destination="EmQ-xw-XQm" id="634-p8-BYg"/>
+                        <outlet property="imagview" destination="Yhu-mO-6Yo" id="t7O-U2-M49"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="EmQ-xw-XQm">
+            <size key="intrinsicContentSize" width="-1" height="30"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="face" width="32" height="32"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
